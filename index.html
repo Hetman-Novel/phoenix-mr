@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20231120231739">
+   <link rel="stylesheet" href="files/fancybox/fancybox.css?_v=20231120231739">
+   <link rel="stylesheet" href="css/style.min.css?_v=20231120231739">
+   <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
+   <title>Home</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+   <div class="header__wrapper lock-padding">
+      <div id="header-container" class="n_container header-container">
+         <a href="index.html" class="header__blockLogo">
+            <img src="images/logo.png" alt="PHOENIX MEDICAL RESORT Східниця">
+         </a>
+         <div class="header__menu menu">
+            <div class="menu__body">
+               <nav class="menu-topmenu-container">
+                  <ul class="menu__list">
+                     <li class="menu-item current-menu-item current_page_item"> <!-- current-menu-item current_page_item -->
+                        <a class="menu__link" href="#">Інфраструктура</a>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu__link" href="#">Апартаменти</a>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu__link" href="#">Окупність</a>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu__link" href="#">Локація</a>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu__link" href="#">Хід будівництва</a>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu__link" href="#">Контакти</a>
+                     </li>
+                     <!--<li class="menu-item menu-item-has-children">
+                        <a class="menu__link menu__link-language" href="#">Demo</a>
+                        <span class="menu__arrow">
+                           <svg width="10" height="10" viewBox="0 0 24 24">
+                              <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" fill="currentColor" />
+                           </svg>
+                        </span>
+                        <ul class="menu__sub-list">
+                           <li class="menu-item">
+                              <a class="menu__link" href="#">Demo submenu</a>
+                           </li>
+                           <li class="menu-item">
+                              <a class="menu__link" href="#">Demo submenu 2</a>
+                           </li>
+                           <li class="menu-item">
+                              <a class="menu__link" href="#">Demo submenu 3</a>
+                           </li>
+                           <li class="menu-item">
+                              <a class="menu__link" href="#">Demo submenu 4</a>
+                           </li>
+                        </ul>
+                     </li>-->
+                  </ul>
+               </nav>
+               <div id="mobile-map" data-da="menu-topmenu-container, last, 1099"></div>
+            </div>
+         </div>
+         <div class="header__contact hidden" data-da="menu-topmenu-container, last, 1099">
+            <a href="tel:+380676320351">(067) 632 03 51</a>
+            <ul class="header__social">
+               <li>
+                  <a href="https://web.telegram.org/k/" target="_blank">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14" fill="none">
+                        <path d="M14.7695 0.159117L0.594213 5.87107C0.0237811 6.13705 -0.169159 6.66976 0.456314 6.95884L4.09291 8.16645L12.8856 2.48818C13.3657 2.1317 13.8572 2.22676 13.4343 2.61889L5.88252 9.76376L5.64529 12.7875C5.86502 13.2543 6.26734 13.2565 6.52396 13.0245L8.61328 10.9587L12.1916 13.7586C13.0226 14.2727 13.4748 13.9409 13.6537 12.9986L16.0007 1.38573C16.2444 0.225779 15.8288 -0.285294 14.7695 0.159117Z" fill="white" fill-opacity="0.48"/>
+                     </svg>
+                  </a>
+               </li>
+               <li>
+                  <a href="https://web.whatsapp.com/" target="_blank">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.03245 0.0336914C3.19215 0.0336914 0.0683594 3.15836 0.0683594 6.99974C0.0683594 8.52318 0.559656 9.93602 1.39482 11.0828L0.526842 13.6709L3.2044 12.8152C4.30567 13.5442 5.61989 13.9659 7.03649 13.9659C10.8768 13.9659 14.0006 10.8411 14.0006 6.99986C14.0006 3.15848 10.8768 0.0338066 7.03649 0.0338066L7.03245 0.0336914ZM5.08769 3.57213C4.95261 3.24863 4.85024 3.23638 4.64561 3.22806C4.57593 3.22401 4.49828 3.21997 4.4122 3.21997C4.14598 3.21997 3.86764 3.29776 3.69975 3.46974C3.49511 3.67859 2.9874 4.16586 2.9874 5.16516C2.9874 6.16445 3.71615 7.13092 3.81437 7.26615C3.91674 7.40114 5.23512 9.48157 7.28213 10.3295C8.88291 10.9929 9.35793 10.9314 9.72224 10.8536C10.2545 10.7389 10.9219 10.3456 11.0897 9.87072C11.2576 9.39558 11.2576 8.99012 11.2084 8.90413C11.1593 8.81814 11.0241 8.76914 10.8195 8.66662C10.6148 8.56422 9.61987 8.07277 9.43153 8.00724C9.24723 7.93766 9.07126 7.96228 8.93214 8.15888C8.7356 8.43326 8.54322 8.71181 8.38758 8.87963C8.26475 9.0107 8.06404 9.02711 7.89627 8.95741C7.67107 8.86333 7.04065 8.642 6.26268 7.94991C5.6608 7.41351 5.25142 6.74604 5.13275 6.5454C5.01397 6.34071 5.12049 6.22178 5.21455 6.11128C5.31692 5.98426 5.41515 5.89423 5.51752 5.77541C5.6199 5.65671 5.67721 5.59523 5.74272 5.45595C5.8124 5.32084 5.76317 5.18157 5.71406 5.07917C5.66495 4.97676 5.25557 3.97747 5.08769 3.57213Z" fill="white" fill-opacity="0.48"/>
+                     </svg>
+                  </a>
+               </li>
+               <li>
+                  <a href="https://www.viber.com/ua/" target="_blank">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 7C14 3.13385 10.8662 0 7 0C3.13385 0 0 3.13385 0 7C0 8.4693 0.452628 9.83284 1.22606 10.9588L0.5 13.5L2.92434 12.6919C4.07223 13.5153 5.47948 14 7 14C10.8662 14 14 10.8662 14 7ZM8.7018 3.23131C8.27992 3.02535 7.89519 2.91066 7.41919 2.85116C7.32496 2.84012 7.15211 2.82638 7.03446 2.82234C6.80884 2.81534 6.76335 2.82396 6.69846 2.88319C6.59185 2.9785 6.59723 3.18285 6.70816 3.27008C6.76766 3.31558 6.81316 3.32527 7.0762 3.34062C7.85374 3.38612 8.44738 3.59612 9.02138 4.02716C9.71061 4.54246 10.1422 5.26077 10.3056 6.16C10.3471 6.38939 10.3678 6.58162 10.3815 6.87858C10.3899 7.07189 10.3969 7.1147 10.4216 7.16451C10.5005 7.31501 10.7318 7.33708 10.8368 7.20327C10.892 7.13408 10.899 7.08024 10.8893 6.83847C10.8632 6.12985 10.7095 5.48584 10.4397 4.94442C10.2461 4.55619 10.0633 4.30608 9.73405 3.976C9.3827 3.62654 9.11696 3.43431 8.7018 3.23131ZM4.42239 3.0835C4.37931 3.05577 4.30474 3.01727 4.25627 3.00058C4.15666 2.96477 4.00023 2.94942 3.9103 2.9688C3.77892 2.99626 3.61415 3.09454 3.25742 3.35973C3.04285 3.51992 2.74804 3.80746 2.67885 3.9235C2.51866 4.19838 2.52807 4.4318 2.72327 4.96918C3.05792 5.89076 3.54792 6.77897 4.19138 7.63566C5.42257 9.27555 6.97361 10.4693 8.91638 11.2689C9.16407 11.3712 9.24404 11.3879 9.43788 11.378C9.67319 11.3672 9.85169 11.294 10.1034 11.1034C10.3818 10.892 10.7803 10.3972 10.8826 10.1333C10.9792 9.88346 10.9545 9.65677 10.8104 9.47988C10.7291 9.38188 10.1255 8.89 9.84334 8.69239C9.62876 8.54323 9.29681 8.33753 9.14469 8.25865C8.94412 8.15634 8.74488 8.13857 8.54969 8.2048C8.39596 8.2573 8.34481 8.3028 8.12081 8.58469C8.00451 8.72846 7.89788 8.85823 7.88415 8.87062C7.86908 8.883 7.82061 8.91073 7.77484 8.93146C7.59365 9.016 7.34596 8.96484 6.9405 8.76292C6.62496 8.60676 6.34551 8.40915 6.02862 8.11919C5.75885 7.87338 5.48639 7.55274 5.334 7.30262C5.13746 6.98089 4.9883 6.56224 4.98668 6.33151C4.98668 6.23189 5.02708 6.09108 5.07688 6.01919C5.096 5.99011 5.21931 5.88107 5.3507 5.77472C5.67862 5.51088 5.75184 5.42796 5.79627 5.27046C5.83907 5.124 5.79358 4.92638 5.65654 4.65984C5.41719 4.19273 4.68516 3.25742 4.42239 3.0835ZM9.43116 4.99827C9.00497 4.36558 8.35477 3.97599 7.51477 3.85295C7.18415 3.80315 7.07323 3.82118 7.00135 3.93292C6.969 3.97965 6.95343 4.03597 6.95719 4.09269C6.96096 4.14941 6.98382 4.20318 7.02207 4.24523C7.07322 4.30473 7.14808 4.33246 7.28377 4.3435C7.65854 4.37392 8.06965 4.49669 8.34776 4.66254C8.67265 4.85575 8.93941 5.13301 9.11993 5.46512C9.28012 5.75831 9.37301 6.13523 9.37301 6.4933C9.37301 6.72511 9.40477 6.811 9.51139 6.86484C9.57492 6.89796 9.68988 6.90066 9.74372 6.87293C9.79353 6.84681 9.85169 6.78327 9.86973 6.73642C9.88911 6.68661 9.88912 6.3867 9.87108 6.2222C9.81992 5.77339 9.67051 5.35473 9.43116 4.99827ZM8.46946 5.22496C8.29096 5.0575 8.08203 4.95411 7.8093 4.89596C7.73166 4.88127 7.65315 4.87156 7.57427 4.86689C7.45796 4.86016 7.43589 4.86284 7.38339 4.88922C7.24339 4.96084 7.20488 5.15577 7.30584 5.27585C7.36103 5.341 7.41219 5.36012 7.58262 5.38085C7.945 5.42528 8.15957 5.56042 8.28126 5.82157C8.33807 5.94461 8.37118 6.07735 8.38922 6.26662C8.4043 6.40877 8.42503 6.46128 8.49153 6.51108C8.5828 6.58162 8.73357 6.57866 8.81542 6.50408C8.90238 6.42412 8.91773 6.3272 8.88031 6.08139C8.82485 5.7042 8.69912 5.44169 8.46946 5.22496Z" fill="white" fill-opacity="0.48"/>
+                     </svg>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <a href="#order-a-call" class="header__button n_btn popup-link">Замовити дзвінок</a>
+         <div id="burger">
+            <span></span>
+        </div>
+      </div>
+   </div>
+</header>
+      <main class="main">
+         <section class="fs">
+            <div class="n_container">
+               <h1 class="fs__title">PHOENIX MEDICAL RESORT Східниця</h1>
+               <div class="fs__buttons">
+                  <a href="#" class="n_btn">Записатись на онлайн-огляд</a>
+                  <a href="#" class="n_btn">Ціни</a>
+                  <a class="presentation-for-investors__button popup-link" href="#get-a-presentation">
+                     Отримати pdf презентацію
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#icon-download)">
+                           <path d="M11.6019 17.46C11.6272 17.4851 11.6549 17.5077 11.6844 17.5275L11.7294 17.5519C11.7632 17.5736 11.8007 17.5888 11.8401 17.5969L11.8869 17.61C11.9587 17.6241 12.0326 17.6241 12.1044 17.61L12.1532 17.595L12.2094 17.5781C12.2287 17.5692 12.2475 17.5592 12.2657 17.5481L12.3051 17.5256C12.3361 17.5048 12.365 17.4809 12.3913 17.4544L17.4369 12.4144C17.4999 12.3654 17.5517 12.3036 17.5889 12.2331C17.6261 12.1626 17.648 12.0849 17.6529 12.0053C17.6578 11.9257 17.6458 11.846 17.6176 11.7714C17.5894 11.6968 17.5456 11.6291 17.4892 11.5727C17.4328 11.5163 17.3651 11.4726 17.2905 11.4443C17.2159 11.4161 17.1362 11.4041 17.0566 11.409C16.977 11.414 16.8994 11.4358 16.8288 11.473C16.7583 11.5103 16.6965 11.5621 16.6476 11.625L12.5619 15.705V0.5625C12.5619 0.413316 12.5027 0.270242 12.3972 0.164752C12.2917 0.0592632 12.1486 0 11.9994 0C11.8502 0 11.7072 0.0592632 11.6017 0.164752C11.4962 0.270242 11.4369 0.413316 11.4369 0.5625V15.705L7.3513 11.625C7.24309 11.5408 7.10783 11.499 6.97097 11.5075C6.83411 11.516 6.70507 11.5742 6.60811 11.6712C6.51115 11.7681 6.45295 11.8972 6.44444 12.034C6.43594 12.1709 6.47772 12.3062 6.56193 12.4144L11.6019 17.46Z" fill="white" fill-opacity="0.09"></path>
+                           <path d="M23.4375 16.5C23.2883 16.5 23.1452 16.5593 23.0398 16.6648C22.9343 16.7702 22.875 16.9133 22.875 17.0625V21.1875C22.875 21.6351 22.6972 22.0643 22.3807 22.3807C22.0643 22.6972 21.6351 22.875 21.1875 22.875H2.8125C2.36495 22.875 1.93572 22.6972 1.61926 22.3807C1.30279 22.0643 1.125 21.6351 1.125 21.1875V17.0625C1.125 16.9133 1.06574 16.7702 0.960248 16.6648C0.854758 16.5593 0.711684 16.5 0.5625 16.5C0.413316 16.5 0.270242 16.5593 0.164752 16.6648C0.0592632 16.7702 0 16.9133 0 17.0625L0 21.1875C0 21.9334 0.296316 22.6488 0.823762 23.1762C1.35121 23.7037 2.06658 24 2.8125 24H21.1875C21.9334 24 22.6488 23.7037 23.1762 23.1762C23.7037 22.6488 24 21.9334 24 21.1875V17.0625C24 16.9133 23.9407 16.7702 23.8352 16.6648C23.7298 16.5593 23.5867 16.5 23.4375 16.5Z" fill="white" fill-opacity="0.09"></path>
+                        </g>
+                        <defs>
+                           <clipPath id="icon-download">
+                              <rect width="24" height="24" fill="white"></rect>
+                           </clipPath>
+                        </defs>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            <div class="fs__bg n_object-fit wrap-lazy-load-image">
+               <img class="n_object-fit" src="images/fs-bg.png" alt="">
+            </div>
+         </section>
+         <div class="wrap-about-project">
+            <section class="about-project">
+               <div class="n_container">
+                  <h2 class="n_sec-title">Про проєкт</h2>
+                  <div class="benefits-investing-pmr__block-text">
+                     <p><span>Продумана інфраструктура</span>, локація та управлінська компанія з досвідом обслуговування преміальних об'єктів більше 10 років забезпечать повноцінне завантаження комплексу та постійний туристичний попит напротязі всього року.</p>
+                  </div>
+                  <div class="benefits-investing-pmr__items">
+                     <div class="benefits-investing-pmr__item">
+                        <div class="benefits-investing-pmr__block-icon">
+                           <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                        </div>
+                        <p>Територія 10 га + 50 га заповідної зони</p>
+                     </div>
+                     <div class="benefits-investing-pmr__item">
+                        <div class="benefits-investing-pmr__block-icon">
+                           <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                        </div>
+                        <p>Найбільший СПА-центр в Східній Європі</p>
+                     </div>
+                     <div class="benefits-investing-pmr__item">
+                        <div class="benefits-investing-pmr__block-icon">
+                           <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                        </div>
+                        <p>Масштабний медичний центр європейських стандартів</p>
+                     </div>
+                     <div class="benefits-investing-pmr__item">
+                        <div class="benefits-investing-pmr__block-icon">
+                           <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                        </div>
+                        <p>Власний бювет</p>
+                     </div>
+                     <div class="benefits-investing-pmr__item">
+                        <div class="benefits-investing-pmr__block-icon">
+                           <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                        </div>
+                        <p>Швидкі темпи будівництва за рахунок власного виробництва</p>
+                     </div>
+                  </div>
+                  <div data-da="benefits-investing-pmr-block-text, last, 575" class="about-project__block-video">
+                     <button type="button" class="about-project__block-video-button" id="play-video-about-project">
+                        <img src="images/play-icon.png" alt="">
+                     </button>
+                     <video id="video-about-project" preload="none" poster="files/video/about-project-poster.png">
+                        <source src="files/video/about-project.mp4" type="video/mp4">
+                     </video>
+                  </div>
+               </div>
+            </section>
+            <section class="benefits-investing-pmr">
+               <div class="n_container">
+                  <h2 class="n_sec-title">
+                     <span>Переваги інвестування в PHOENIX MEDICAL RESORT</span>
+                  </h2>
+                  <div class="benefits-investing-pmr__block-text benefits-investing-pmr-block-text">
+                     <p><span>Продумана інфраструктура</span>, локація та управлінська компанія з досвідом обслуговування преміальних об'єктів більше 10 років забезпечать повноцінне завантаження комплексу та постійний туристичний попит напротязі всього року.</p>
+                  </div>
+                  <div class="benefits-investing-pmr__items">
+                     <div class="benefits-investing-pmr__item">
+                        <div class="benefits-investing-pmr__block-icon">
+                           <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                        </div>
+                        <p>10га парку і атракцій на території комплексу</p>
+                     </div>
+                     <div class="benefits-investing-pmr__item">
+                        <div class="benefits-investing-pmr__block-icon">
+                           <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                        </div>
+                        <p>Медичний центр європейських стандартів</p>
+                     </div>
+                     <div class="benefits-investing-pmr__item">
+                        <div class="benefits-investing-pmr__block-icon">
+                           <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                        </div>
+                        <p>Швидка окупність до 7 років з доходом від 15% річних</p>
+                     </div>
+                     <div class="benefits-investing-pmr__item">
+                        <div class="benefits-investing-pmr__block-icon">
+                           <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                        </div>
+                        <p>Найсучасніша клініка превентивної медицини в Україні</p>
+                     </div>
+                     <div class="benefits-investing-pmr__item">
+                        <div class="benefits-investing-pmr__block-icon">
+                           <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                        </div>
+                        <p>Східниця один з лідерів серед туристичної індустрії України</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="benefits-investing-pmr__bg n_object-fit wrap-lazy-load-image">
+                  <img class="n_object-fit" src="images/benefits-investing-pmr-bg.png" alt="">
+               </div>
+            </section>
+         </div>
+         <div class="wrap-location-propositions">
+            <section class="location-and-infrastructure">
+               <div class="n_container">
+                  <h2 class="n_sec-title">Локація та інфраструктурна концепція - магніт для майбутніх гостей</h2>
+                  <div class="location-and-infrastructure__items">
+                     <div class="location-and-infrastructure__item">
+                        <div class="location-and-infrastructure__content">
+                           <p>Локація - одна із основних перевах комплексу. Знаходиться в курортній перлині Львівської області - бальнеологічному курорті Східниці, де є цілющі мінеральні води, фантастична природа та захоплююче дозвілля в горах. Зручна транспортна інфраструктура дозволяє легко дістатися до "Української Швейцарії" з будь-якого куточка України.</p>
+                           <p>Крім того, регіон має значний туристичний потенціал. Національний парк «Сколівські Бескиди», наскельна фортеця-град Тустань, 5 самобутніх водоспадів, мінеральні води Нафтусі - це тільки декілька природних пам'яток, які хочеться відвідати і всі вони знаходяться у безпосередній близькості до Phoenix Medical Resort.</p>
+                           <ul>
+                              <li>
+                                 <p>Від Києва<span>647 км</span></p>
+                                 <p>(8 год 10 хв)</p>
+                              </li>
+                              <li>
+                                 <p>Від Львова<span>106 км</span></p>
+                                 <p>(2 год 10 хв)</p>
+                              </li>
+                              <li>
+                                 <p>Від Трускавця<span>22 км</span></p>
+                                 <p>(30 хв)</p>
+                              </li>
+                              <li>
+                                 <p>Від Моршина<span>64 км</span></p>
+                                 <p>(1 год 5 хв)</p>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="location-and-infrastructure__item">
+                        <div class="location-and-infrastructure__block-video">
+                           <button type="button" class="location-and-infrastructure__block-video-button" id="play-video-location">
+                              <img src="images/play-icon.png" alt="">
+                           </button>
+                           <video id="video-location" preload="none" poster="images/1.10.2023-03.png">
+                              <source src="files/video/about-project.mp4" type="video/mp4">
+                           </video>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="our-propositions">
+               <div class="n_container">
+                  <h2 class="n_sec-title">Наші пропозиції</h2>
+                  <div class="our-propositions__items">
+                     <div class="our-propositions__item">
+                        <div class="our-propositions__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit" src="images/our-propositions.jpg" alt="">
+                        </div>
+                        <h3 class="our-propositions__title">Апартаменти 26-32 м²</h3>
+                        <ul>
+                           <li>Сума інвестиції до 76 800$ (в залежності від вибору площі та планування)</li>
+                           <li>Окупність інвестицій до 6,5 років</li>
+                           <li>У вартість входить апартаменти з ремонтом, технікою, меблями та всім наповненням</li>
+                        </ul>
+                        <a href="#" class="our-propositions__button n_btn">Обрати планування</a>
+                     </div>
+                     <div class="our-propositions__item">
+                        <div class="our-propositions__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit" src="images/our-propositions.jpg" alt="">
+                        </div>
+                        <h3 class="our-propositions__title">Апартаменти 37-44 м²</h3>
+                        <ul>
+                           <li>Сума інвестиції в апартаменти до 103 400$ (в залежності від вибору площі та планування)</li>
+                           <li>Окупність інвестицій до 7 років</li>
+                           <li>У вартість входить апартаменти з ремонтом, технікою, меблями та всім наповненням</li>
+                        </ul>
+                        <a href="#" class="our-propositions__button n_btn">Обрати планування</a>
+                     </div>
+                     <div class="our-propositions__item">
+                        <div class="our-propositions__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit" src="images/our-propositions.jpg" alt="">
+                        </div>
+                        <h3 class="our-propositions__title">Апартаменти 45-55 м²</h3>
+                        <ul>
+                           <li>Сума інвестиції в апартаменти до 126 500$ (в залежності від вибору площі та планування)</li>
+                           <li>Окупність інвестицій до 7,5 років</li>
+                           <li>У вартість входить апартаменти з ремонтом, технікою, меблями та всім наповненням</li>
+                        </ul>
+                        <a href="#" class="our-propositions__button n_btn">Обрати планування</a>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+         <section class="infrastructure">
+            <div class="n_container">
+               <h2 class="n_sec-title">Інфаструктура</h2>
+               <div class="infrastructure__items">
+                  <div class="infrastructure__item">
+                     <div class="infrastructure__block-video">
+                        <button type="button" class="infrastructure__block-video-button" id="play-video-infrastructure">
+                           <img src="images/play-icon.png" alt="">
+                        </button>
+                        <video id="video-infrastructure" preload="none" poster="files/video/infrastructure-poster.png">
+                           <source src="files/video/about-project.mp4" type="video/mp4">
+                        </video>
+                     </div>
+                  </div>
+                  <div class="infrastructure__item">
+                     <div class="infrastructure__columns">
+                        <div class="infrastructure__column">
+                           <div class="infrastructure__column-block-icon">
+                              <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                           </div>
+                           <p>10га парку і атракцій<br> на території комплексу</p>
+                        </div>
+                        <div class="infrastructure__column">
+                           <div class="infrastructure__column-block-icon">
+                              <img src="images/svg/infrastructure-icon-2.svg" alt="">
+                           </div>
+                           <p>Корти, футбольне поле, волейбольний маданчик, Work-out зона, парк дитячих розваг</p>
+                        </div>
+                        <div class="infrastructure__column">
+                           <div class="infrastructure__column-block-icon">
+                              <img src="images/svg/infrastructure-icon-3.svg" alt="">
+                           </div>
+                           <p>2 відкриті басейни + 3 закриті</p>
+                        </div>
+                        <div class="infrastructure__column">
+                           <div class="infrastructure__column-block-icon">
+                              <img src="images/svg/infrastructure-icon-2.svg" alt="">
+                           </div>
+                           <p>Власний крісельний витяг</p>
+                        </div>
+                        <div class="infrastructure__column">
+                           <div class="infrastructure__column-block-icon">
+                              <img src="images/svg/infrastructure-icon-2.svg" alt="">
+                           </div>
+                           <p>4 ресторани на всі смаки</p>
+                        </div>
+                        <div class="infrastructure__column">
+                           <div class="infrastructure__column-block-icon">
+                              <img src="images/svg/infrastructure-icon-3.svg" alt="">
+                           </div>
+                           <p>Лижна траса 800м зі<br> штучним покриттям (діє круглорічно)</p>
+                        </div>
+                        <div class="infrastructure__column">
+                           <div class="infrastructure__column-block-icon">
+                              <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                           </div>
+                           <p>Бювет і власне джерело мінеральної води</p>
+                        </div>
+                        <div class="infrastructure__column">
+                           <div class="infrastructure__column-block-icon">
+                              <img src="images/svg/infrastructure-icon-2.svg" alt="">
+                           </div>
+                           <p>Найсучасніша клініка<br> превентивної медицини</p>
+                        </div>
+                        <div class="infrastructure__column">
+                           <div class="infrastructure__column-block-icon">
+                              <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                           </div>
+                           <p>Гелікоптерний майданчик</p>
+                        </div>
+                        <div class="infrastructure__column">
+                           <div class="infrastructure__column-block-icon">
+                              <img src="images/svg/infrastructure-icon-1.svg" alt="">
+                           </div>
+                           <p>Садівниче та рибне господарство</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="profitability-forecast">
+            <div class="n_container">
+               <h2 class="n_sec-title">Прогнозування окупності</h2>
+               <div class="profitability-forecast__items">
+                  <div class="profitability-forecast__item">
+                     <div class="profitability-forecast__block">
+                        <h3>$3 245</h3>
+                        <p>Середня вартість номера за добу</p>
+                     </div>
+                     <div class="profitability-forecast__block">
+                        <h3>62%</h3>
+                        <p>Прогнозована середньорічна завантаженість номерного фонду готелю</p>
+                     </div>
+                     <div class="profitability-forecast__block">
+                        <h3>$3 245</h3>
+                        <p>Середня вартість номера за добу</p>
+                     </div>
+                     <div class="profitability-forecast__block">
+                        <h3>$3 245</h3>
+                        <p>Середня вартість номера за добу</p>
+                     </div>
+                     <a data-da="profitability-forecast-second-item, last, 860" href="#" class="profitability-forecast__button n_btn">Замовити детальний прорахунок</a>
+                  </div>
+                  <div class="profitability-forecast__item profitability-forecast-second-item">
+                     <div class="profitability-forecast__table">
+                        <ul>
+                           <li>
+                              <p>Стаття</p>
+                              <p>Частка доходу</p>
+                              <p>Сума, $</p>
+                           </li>
+                           <li>
+                              <p>Дохід</p>
+                              <p>80%</p>
+                              <p>1843</p>
+                           </li>
+                           <li>
+                              <p>Заробітна плата</p>
+                              <p>13%</p>
+                              <p>1743</p>
+                           </li>
+                           <li>
+                              <p>Збут та маркетинг</p>
+                              <p>80%</p>
+                              <p>1890</p>
+                           </li>
+                           <li>
+                              <p>Комунальні витрати</p>
+                              <p>78%</p>
+                              <p>1443</p>
+                           </li>
+                           <li>
+                              <p>Господарські витрати</p>
+                              <p>90%</p>
+                              <p>843</p>
+                           </li>
+                           <li>
+                              <p>Податки</p>
+                              <p>100%</p>
+                              <p>1843</p>
+                           </li>
+                           <li>
+                              <p>Інше</p>
+                              <p>78%</p>
+                              <p>1843</p>
+                           </li>
+                           <li>
+                              <p>Операційний прибуток</p>
+                              <p>55%</p>
+                              <p>1843</p>
+                           </li>
+                           <li>
+                              <p>Резервний фонд</p>
+                              <p>45%</p>
+                              <p>1843</p>
+                           </li>
+                           <li>
+                              <p>Комісія оператора</p>
+                              <p>90%</p>
+                              <p>1843</p>
+                           </li>
+                           <li>
+                              <p>Чистий прибуток інвестора</p>
+                              <p>100%</p>
+                              <p>1843</p>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="why-its-good-to-invest">
+            <div class="n_container">
+               <h2 class="n_sec-title">Чому вигідно інвестувати в туристичну нерухомість Східниці?</h2>
+               <div class="why-its-good-to-invest__items">
+                  <div class="why-its-good-to-invest__item">
+                     <div class="why-its-good-to-invest__content">
+                        <h3>Перспективні локації об’єктів</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                        <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.</p>
+                        <p>Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, met</p>
+                     </div>
+                  </div>
+                  <div class="why-its-good-to-invest__item">
+                     <div class="why-its-good-to-invest__block-image wrap-lazy-load-image">
+                        <img class="n_object-fit" src="images/why-its-good-to-invest.png" alt="">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="why-its-good-to-invest__bg n_object-fit wrap-lazy-load-image">
+               <img class="n_object-fit" src="images/why-its-good-to-invest-bg.jpg" alt="">
+            </div>
+         </section>
+         <section class="presentation-for-investors">
+            <div class="n_container">
+               <h2 class="n_sec-title">Презентація для інвестора</h2>
+               <div class="presentation-for-investors__items">
+                  <div class="presentation-for-investors__item presentation-for-investors-first-item">
+                     <div class="presentation-for-investors__block-image wrap-lazy-load-image">
+                        <img class="n_object-fit" src="images/presentation-for-investors.png" alt="">
+                     </div>
+                  </div>
+                  <div class="presentation-for-investors__item">
+                     <div class="presentation-for-investors__content">
+                        <h3>PHOENIX MEDICAL RESORT -</h3>
+                        <p>вигідна інвестиція у дохідну нерухомість<br> Єдиний інвестиційний проект у Східниці з форматом “міста у місті”. Унікальна інфраструктурна концепція в поєднанні з швидкими темпами будівництва забезпечать швидку окупність та зростання пасивного доходу від вкладених інвестицій. Залиште заявку, та отримайте детальний огляд комплексу та прорахунок окупності.</p>
+                        <a data-da="presentation-for-investors-first-item, last, 800" class="presentation-for-investors__button" href="#" download>
+                           Отримати pdf презентацію
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <g clip-path="url(#clip0_750_349)">
+                                 <path d="M11.6019 17.46C11.6272 17.4851 11.6549 17.5077 11.6844 17.5275L11.7294 17.5519C11.7632 17.5736 11.8007 17.5888 11.8401 17.5969L11.8869 17.61C11.9587 17.6241 12.0326 17.6241 12.1044 17.61L12.1532 17.595L12.2094 17.5781C12.2287 17.5692 12.2475 17.5592 12.2657 17.5481L12.3051 17.5256C12.3361 17.5048 12.365 17.4809 12.3913 17.4544L17.4369 12.4144C17.4999 12.3654 17.5517 12.3036 17.5889 12.2331C17.6261 12.1626 17.648 12.0849 17.6529 12.0053C17.6578 11.9257 17.6458 11.846 17.6176 11.7714C17.5894 11.6968 17.5456 11.6291 17.4892 11.5727C17.4328 11.5163 17.3651 11.4726 17.2905 11.4443C17.2159 11.4161 17.1362 11.4041 17.0566 11.409C16.977 11.414 16.8994 11.4358 16.8288 11.473C16.7583 11.5103 16.6965 11.5621 16.6476 11.625L12.5619 15.705V0.5625C12.5619 0.413316 12.5027 0.270242 12.3972 0.164752C12.2917 0.0592632 12.1486 0 11.9994 0C11.8502 0 11.7072 0.0592632 11.6017 0.164752C11.4962 0.270242 11.4369 0.413316 11.4369 0.5625V15.705L7.3513 11.625C7.24309 11.5408 7.10783 11.499 6.97097 11.5075C6.83411 11.516 6.70507 11.5742 6.60811 11.6712C6.51115 11.7681 6.45295 11.8972 6.44444 12.034C6.43594 12.1709 6.47772 12.3062 6.56193 12.4144L11.6019 17.46Z" fill="white" fill-opacity="0.09"/>
+                                 <path d="M23.4375 16.5C23.2883 16.5 23.1452 16.5593 23.0398 16.6648C22.9343 16.7702 22.875 16.9133 22.875 17.0625V21.1875C22.875 21.6351 22.6972 22.0643 22.3807 22.3807C22.0643 22.6972 21.6351 22.875 21.1875 22.875H2.8125C2.36495 22.875 1.93572 22.6972 1.61926 22.3807C1.30279 22.0643 1.125 21.6351 1.125 21.1875V17.0625C1.125 16.9133 1.06574 16.7702 0.960248 16.6648C0.854758 16.5593 0.711684 16.5 0.5625 16.5C0.413316 16.5 0.270242 16.5593 0.164752 16.6648C0.0592632 16.7702 0 16.9133 0 17.0625L0 21.1875C0 21.9334 0.296316 22.6488 0.823762 23.1762C1.35121 23.7037 2.06658 24 2.8125 24H21.1875C21.9334 24 22.6488 23.7037 23.1762 23.1762C23.7037 22.6488 24 21.9334 24 21.1875V17.0625C24 16.9133 23.9407 16.7702 23.8352 16.6648C23.7298 16.5593 23.5867 16.5 23.4375 16.5Z" fill="white" fill-opacity="0.09"/>
+                              </g>
+                              <defs>
+                                 <clipPath id="clip0_750_349">
+                                    <rect width="24" height="24" fill="white"/>
+                                 </clipPath>
+                              </defs>
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="inspired-style-comfort">
+            <div class="n_container">
+               <h2 class="n_sec-title">Поєднання стилю та комфорту</h2>
+               <div class="inspired-style-comfort__slider swiper-conteiner">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <div class="inspired-style-comfort__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit js-inspired-style-comfort-gallery" src="images/1.10.2023-02.png" alt="">
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="inspired-style-comfort__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit js-inspired-style-comfort-gallery" src="images/1.10.2023-03.png" alt="">
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="inspired-style-comfort__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit js-inspired-style-comfort-gallery" src="images/1.10.2023-04.jpg" alt="">
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="inspired-style-comfort__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit js-inspired-style-comfort-gallery" src="images/1.10.2023-05.jpg" alt="">
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="inspired-style-comfort__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit js-inspired-style-comfort-gallery" src="images/1.10.2023-03.png" alt="">
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="inspired-style-comfort__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit js-inspired-style-comfort-gallery" src="images/1.10.2023-02.png" alt="">
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="inspired-style-comfort__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit js-inspired-style-comfort-gallery" src="images/1.10.2023-03.png" alt="">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-button-prev slider-btn-prev js-inspired-style-comfort-btn-prev">
+                     <img src="images/slider-arrow-for-btn-second.png" alt="arrow">
+                  </div>
+                  <div class="swiper-button-next slider-btn-next js-inspired-style-comfort-btn-next">
+                     <img src="images/slider-arrow-for-btn-second.png" alt="arrow">
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="results-in-numbers">
+            <div class="n_container">
+               <h2 class="n_sec-title">Результати Фенікс Інвест в цифрах</h2>
+               <div class="results-in-numbers__block-text">
+                  <p>Перетворюємо нерухомість на джерело доходу для інвестора. Маємо успішні реалізовані інвестиційні проєкти в Буковелі, які <span>ВЖЕ приносять пасивний дохід</span> всім власникам нерухомості.</p>
+               </div>
+               <div class="results-in-numbers__items">
+                  <div class="results-in-numbers__item">
+                     <div class="results-in-numbers__block">
+                        <h3>287</h3>
+                        <p>Котеджів і апартів побудовано та продано</p>
+                     </div>
+                  </div>
+                  <div class="results-in-numbers__item">
+                     <div class="results-in-numbers__block">
+                        <h3>271</h3>
+                        <p>Інвесторів довірили нам свої кошти для розвитку</p>
+                     </div>
+                  </div>
+                  <div class="results-in-numbers__item">
+                     <div class="results-in-numbers__block">
+                        <h3>42 га</h3>
+                        <p>Території вже забудовано</p>
+                     </div>
+                  </div>
+                  <div class="results-in-numbers__item">
+                     <div class="results-in-numbers__block">
+                        <h3>50 років</h3>
+                        <p>Гарантія на будь-яку будівлю</p>
+                     </div>
+                  </div>
+                  <div class="results-in-numbers__item">
+                     <div class="results-in-numbers__block">
+                        <h3>24/7</h3>
+                        <p>Повноцінний сервіс</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="weekday-routine">
+            <div class="n_container">
+               <h2 class="n_sec-title">Хід будівництва</h2>
+               <div class="weekday-routine__wrap-items">
+                  <div class="weekday-routine__wrap-select">
+                     <p>Станом на:</p>
+                     <div class="select">
+                        <div class="select__header">
+                           <span class="select__current">1.10.2023</span>
+                           <div class="select__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
+                                 <path d="M1 0.75L5.5 5.25L10 0.75" stroke="#EDE8E5"/>
+                              </svg>
+                           </div>
+                        </div>
+                        <div id="js-tabs-date" class="select__body">
+                           <div data-select-id="1.10.2023" class="select__item current-lang">1.10.2023</div>
+                           <div data-select-id="30.09.2023" class="select__item">30.09.2023</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div data-content-id="1.10.2023" class="weekday-routine__items js-date-content show-date-content">
+                     <div class="weekday-routine__item">
+                     <div class="weekday-routine__block-text">
+                        <p>1. У 1-му під'їзді завершили монтаж теплої підлоги на 1-му поверсі, виконуємо монтаж мережі водопроводу та каналізації.</p>
+                        <p>2. У 2-му під'їзді виконуємо роботи по оздобленню фасаду, завершили монтаж теплої підлоги та заливання напівсухої стяжки квартир на 2-4 поверхах, виконуємо монтаж мережі водопроводу та каналізації.</p>
+                        <p>3. У 3-му під'їзді виконуємо роботи по оздобленню фасаду, завершили заливання напівсухої стяжки квартир на 2-5 поверхах, виконуємо монтаж мережі водопроводу та каналізації.</p>
+                        <p>4. У 4-му під'їзді завершили фасадні роботи.</p>
+                        <p>3. У 3-му під'їзді виконуємо роботи по оздобленню фасаду, завершили заливання напівсухої стяжки квартир на 2-5 поверхах, виконуємо монтаж мережі водопроводу та каналізації.</p>
+                        <p>4. У 4-му під'їзді завершили фасадні роботи.</p>
+                        <p>3. У 3-му під'їзді виконуємо роботи по оздобленню фасаду, завершили заливання напівсухої стяжки квартир на 2-5 поверхах, виконуємо монтаж мережі водопроводу та каналізації.</p>
+                     </div>
+                     </div>
+                     <div class="weekday-routine__item">
+                        <div class="weekday-routine__wrap-gallery">
+                           <div class="weekday-routine__gallery-big wrap-lazy-load-image">
+                              <img class="n_object-fit js-weekday-routine-gallery-1102023" src="images/1.10.2023-01.jpg" alt="">
+                           </div>
+                           <div class="weekday-routine__gallery-slider swiper-conteiner">
+                              <div class="swiper-wrapper">
+                                 <div class="swiper-slide">
+                                    <div class="weekday-routine__block-image wrap-lazy-load-image">
+                                       <img class="n_object-fit js-weekday-routine-gallery-1102023" src="images/1.10.2023-02.png" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="weekday-routine__block-image wrap-lazy-load-image">
+                                       <img class="n_object-fit js-weekday-routine-gallery-1102023" src="images/1.10.2023-03.png" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="weekday-routine__block-image wrap-lazy-load-image">
+                                       <img class="n_object-fit js-weekday-routine-gallery-1102023" src="images/1.10.2023-04.jpg" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="weekday-routine__block-image wrap-lazy-load-image">
+                                       <img class="n_object-fit js-weekday-routine-gallery-1102023" src="images/1.10.2023-05.jpg" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="weekday-routine__block-image wrap-lazy-load-image">
+                                       <img class="n_object-fit js-weekday-routine-gallery-1102023" src="images/1.10.2023-03.png" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="weekday-routine__block-image wrap-lazy-load-image">
+                                       <img class="n_object-fit js-weekday-routine-gallery-1102023" src="images/1.10.2023-02.png" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="weekday-routine__block-image wrap-lazy-load-image">
+                                       <img class="n_object-fit js-weekday-routine-gallery-1102023" src="images/1.10.2023-03.png" alt="">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="swiper-button-prev slider-btn-prev js-weekday-routine-btn-prev">
+                                 <img src="images/slider-arrow-for-btn-second.png" alt="arrow">
+                              </div>
+                              <div class="swiper-button-next slider-btn-next js-weekday-routine-btn-next">
+                                 <img src="images/slider-arrow-for-btn-second.png" alt="arrow">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div data-content-id="30.09.2023" class="weekday-routine__items js-date-content">
+                     <div class="weekday-routine__item">
+                     <div class="weekday-routine__block-text">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur quo, voluptatibus labore cum facere nemo asperiores amet odit velit non cumque necessitatibus fuga suscipit inventore? Veritatis obcaecati laborum vitae aut ipsum? Unde maxime, voluptatibus facilis labore numquam sequi deserunt hic dolorem.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti voluptate rem dignissimos. Laborum maiores totam officia, quidem ut consectetur officiis ratione obcaecati beatae soluta ex, accusamus sit, ipsam ea. Accusantium provident fuga mollitia ipsum voluptatum omnis quisquam eum! Enim commodi quos accusamus perferendis voluptatem sequi voluptatibus unde quas, voluptas quia.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita minima dignissimos excepturi hic itaque quisquam harum ut doloribus maiores repellat quo, odio autem vero praesentium aperiam neque, aliquid architecto in. Quae sint eveniet architecto!</p>
+                     </div>
+                     </div>
+                     <div class="weekday-routine__item">
+                        <div class="weekday-routine__wrap-gallery">
+                           <div class="weekday-routine__gallery-big wrap-lazy-load-image">
+                              <img class="n_object-fit js-weekday-routine-gallery-30092023" src="https://picsum.photos/id/5/800/600" alt="">
+                           </div>
+                           <div class="weekday-routine__gallery-slider swiper-conteiner">
+                              <div class="swiper-wrapper">
+                                 <div class="swiper-slide">
+                                    <div class="weekday-routine__block-image wrap-lazy-load-image">
+                                       <img class="n_object-fit js-weekday-routine-gallery-30092023" src="https://picsum.photos/id/18/640/350" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="weekday-routine__block-image wrap-lazy-load-image">
+                                       <img class="n_object-fit js-weekday-routine-gallery-30092023" src="https://picsum.photos/id/16/640/350" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="weekday-routine__block-image wrap-lazy-load-image">
+                                       <img class="n_object-fit js-weekday-routine-gallery-30092023" src="https://picsum.photos/id/36/640/350" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="weekday-routine__block-image wrap-lazy-load-image">
+                                       <img class="n_object-fit js-weekday-routine-gallery-30092023" src="https://picsum.photos/id/44/640/350" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="weekday-routine__block-image wrap-lazy-load-image">
+                                       <img class="n_object-fit js-weekday-routine-gallery-30092023" src="https://picsum.photos/id/33/640/350" alt="">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="swiper-button-prev slider-btn-prev js-weekday-routine-btn-prev">
+                                 <img src="images/slider-arrow-for-btn-second.png" alt="arrow">
+                              </div>
+                              <div class="swiper-button-next slider-btn-next js-weekday-routine-btn-next">
+                                 <img src="images/slider-arrow-for-btn-second.png" alt="arrow">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="permissible-documents">
+            <div class="n_container">
+               <h2 class="n_sec-title">Дозвільні документи</h2>
+               <div class="permissible-documents__slider swiper-conteiner">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <div class="permissible-documents__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit js-permissible-documents-gallery" src="images/permissible-documents-image.jpg" alt="">
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="permissible-documents__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit js-permissible-documents-gallery" src="images/permissible-documents-image.jpg" alt="">
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="permissible-documents__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit js-permissible-documents-gallery" src="images/permissible-documents-image.jpg" alt="">
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="permissible-documents__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit js-permissible-documents-gallery" src="images/permissible-documents-image.jpg" alt="">
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="permissible-documents__block-image wrap-lazy-load-image">
+                           <img class="n_object-fit js-permissible-documents-gallery" src="images/permissible-documents-image.jpg" alt="">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-button-prev slider-btn-prev js-permissible-documents-btn-prev">
+                     <img src="images/slider-arrow-for-btn.png" alt="arrow">
+                  </div>
+                  <div class="swiper-button-next slider-btn-next js-permissible-documents-btn-next">
+                     <img src="images/slider-arrow-for-btn.png" alt="arrow">
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+    <div class="n_container">
+        <div class="footer__items">
+            <div class="footer__item">
+                <div class="footer__item-block">
+                    <div class="footer__item-block-content">
+                        <h3 class="footer__title"><a href="tel:+380672630252">(067) 263 02 52</a></h3>
+                        <p>(telegram, viber)</p>
+                    </div>
+                    <a href="mailto:phoenix.medical.resort@gmail.com">phoenix.medical.resort@gmail.com</a>
+                </div>
+                <div class="footer__item-block">
+                    <div class="footer__item-block-content">
+                        <h3 class="footer__title">Адреса містечка:</h3>
+                        <address>
+                            Львівська обл, с. Східниця,<br>
+                            вул. Східницька, 10
+                        </address>
+                    </div>
+                    <ul class="footer__social">
+                        <li>
+                            <a href="https://facebook.com/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+                                    <g clip-path="url(#clip0_272_2209)">
+                                        <path d="M8.56381 23.9762C8.43735 23.981 8.35642 23.9905 8.27549 23.9905C6.54553 23.9905 4.82062 23.9857 3.09066 23.9952C2.84786 23.9952 2.7821 23.9333 2.7821 23.7048C2.78716 19.9143 2.78716 16.1191 2.78716 12.3286C2.78716 12.2286 2.78716 12.1286 2.78716 12C1.8463 12 0.930739 12 0 12C0 10.6476 0 9.31905 0 7.95239C0.0961089 7.95239 0.187159 7.95239 0.273151 7.95239C1.03191 7.95239 1.79066 7.94763 2.54942 7.95715C2.74163 7.95715 2.79222 7.90477 2.79222 7.72858C2.7821 6.66668 2.7821 5.60001 2.79222 4.53811C2.79728 3.79525 2.92374 3.07144 3.28794 2.40001C3.80895 1.45239 4.63346 0.838107 5.67549 0.457155C6.52529 0.142869 7.42062 0.0285833 8.32101 0.0142976C9.78794 -0.00474999 11.2549 0.00477381 12.7218 1.19048e-05C12.8584 1.19048e-05 12.9696 -0.00475 12.9696 0.176202C12.9646 1.48573 12.9646 2.79525 12.9646 4.10477C12.9646 4.11906 12.9595 4.13334 12.9393 4.19525C12.8533 4.19525 12.7572 4.19525 12.6611 4.19525C11.7506 4.19525 10.8401 4.19049 9.92957 4.19525C9.4035 4.19525 8.9786 4.39525 8.71051 4.82858C8.62957 4.95715 8.57899 5.12382 8.57899 5.2762C8.56381 6.08572 8.57899 6.89525 8.56887 7.70477C8.56887 7.89525 8.62957 7.94763 8.82685 7.94763C10.0914 7.9381 11.356 7.94286 12.6206 7.94286C12.7218 7.94286 12.8179 7.94286 12.9899 7.94286C12.8128 9.30477 12.6409 10.6381 12.4638 11.9857C11.1486 11.9857 9.86887 11.9857 8.56381 11.9857C8.56381 15.9905 8.56381 19.9714 8.56381 23.9762Z" fill="#181D23"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_272_2209">
+                                            <rect width="13" height="24" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_272_2214)">
+                                        <path d="M15.84 12C15.84 12.7595 15.6148 13.5019 15.1928 14.1334C14.7709 14.7649 14.1712 15.2571 13.4695 15.5477C12.7678 15.8383 11.9957 15.9144 11.2509 15.7662C10.506 15.618 9.82174 15.2523 9.28471 14.7153C8.74768 14.1783 8.38195 13.494 8.23378 12.7491C8.08562 12.0043 8.16166 11.2322 8.4523 10.5305C8.74294 9.82883 9.23513 9.2291 9.86661 8.80716C10.4981 8.38521 11.2405 8.16 12 8.16C13.0181 8.16116 13.9941 8.56611 14.714 9.286C15.4339 10.0059 15.8388 10.9819 15.84 12ZM24 6.72V17.28C23.998 19.0616 23.2893 20.7697 22.0295 22.0295C20.7697 23.2893 19.0616 23.998 17.28 24H6.72C4.93836 23.998 3.23028 23.2893 1.97047 22.0295C0.710664 20.7697 0.00201777 19.0616 0 17.28V6.72C0.00201777 4.93836 0.710664 3.23028 1.97047 1.97047C3.23028 0.710664 4.93836 0.00201777 6.72 0H17.28C19.0616 0.00201777 20.7697 0.710664 22.0295 1.97047C23.2893 3.23028 23.998 4.93836 24 6.72ZM17.76 12C17.76 10.8608 17.4222 9.74714 16.7893 8.79992C16.1563 7.85269 15.2568 7.11441 14.2043 6.67845C13.1518 6.24249 11.9936 6.12843 10.8763 6.35068C9.75895 6.57293 8.73262 7.12151 7.92706 7.92706C7.12151 8.73262 6.57293 9.75895 6.35068 10.8763C6.12843 11.9936 6.24249 13.1518 6.67845 14.2043C7.11441 15.2568 7.85269 16.1563 8.79992 16.7893C9.74714 17.4222 10.8608 17.76 12 17.76C13.5271 17.7583 14.9912 17.1509 16.071 16.071C17.1509 14.9912 17.7583 13.5271 17.76 12ZM19.68 5.76C19.68 5.47519 19.5955 5.19679 19.4373 4.95998C19.2791 4.72317 19.0542 4.5386 18.7911 4.42961C18.5279 4.32062 18.2384 4.29211 17.9591 4.34767C17.6797 4.40323 17.4232 4.54038 17.2218 4.74177C17.0204 4.94315 16.8832 5.19974 16.8277 5.47907C16.7721 5.7584 16.8006 6.04794 16.9096 6.31106C17.0186 6.57419 17.2032 6.79909 17.44 6.95732C17.6768 7.11555 17.9552 7.2 18.24 7.2C18.6219 7.2 18.9882 7.04829 19.2582 6.77823C19.5283 6.50818 19.68 6.14191 19.68 5.76Z" fill="#181D23"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_272_2214">
+                                            <rect width="24" height="24" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://web.telegram.org/k/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M22.0517 2.12901L0.78878 10.3709C-0.0668675 10.7547 -0.356277 11.5233 0.581933 11.9404L6.03682 13.6829L19.2259 5.48965C19.946 4.97527 20.6833 5.11244 20.0489 5.67825L8.72124 15.9877L8.3654 20.3506C8.69499 21.0243 9.29847 21.0274 9.68339 20.6926L12.8174 17.7119L18.1848 21.7519C19.4314 22.4937 20.1097 22.015 20.3779 20.6553L23.8985 3.89891C24.264 2.22519 23.6407 1.48776 22.0517 2.12901Z" fill="#181D23"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://web.whatsapp.com/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_272_2216)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9965 0C5.38113 0 0 5.38264 0 11.9999C0 14.6242 0.846321 17.058 2.285 19.0335L0.789795 23.4919L5.40222 22.0178C7.2993 23.2735 9.56321 24 12.0035 24C18.6189 24 24 18.6172 24 12.0001C24 5.38285 18.6189 0.000198364 12.0035 0.000198364L11.9965 0ZM8.64642 6.09541C8.41374 5.53814 8.23739 5.51704 7.88489 5.5027C7.76486 5.49573 7.63111 5.48877 7.48282 5.48877C7.02422 5.48877 6.54473 5.62276 6.25552 5.91902C5.90302 6.27879 5.02841 7.11819 5.02841 8.8396C5.02841 10.561 6.28379 12.2259 6.45297 12.4588C6.62932 12.6914 8.90039 16.2752 12.4266 17.7357C15.1842 18.8786 16.0025 18.7726 16.63 18.6387C17.5468 18.4412 18.6965 17.7636 18.9857 16.9455C19.2749 16.127 19.2749 15.4286 19.1901 15.2805C19.1055 15.1323 18.8726 15.0479 18.5201 14.8713C18.1676 14.6949 16.4537 13.8483 16.1292 13.7354C15.8118 13.6156 15.5086 13.658 15.269 13.9967C14.9304 14.4693 14.599 14.9492 14.3309 15.2383C14.1193 15.464 13.7736 15.4923 13.4846 15.3722C13.0966 15.2102 12.0107 14.8289 10.6705 13.6367C9.63369 12.7127 8.92848 11.5629 8.72406 11.2172C8.51944 10.8646 8.70294 10.6598 8.86496 10.4694C9.04131 10.2506 9.21052 10.0955 9.38687 9.89084C9.56322 9.68636 9.66195 9.58045 9.77481 9.34053C9.89483 9.10778 9.81003 8.86787 9.72543 8.69147C9.64084 8.51507 8.93563 6.79365 8.64642 6.09541Z" fill="#181D23"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_272_2216">
+                                            <rect width="24" height="24" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.viber.com/ua/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12C24 5.37231 18.6277 0 12 0C5.37231 0 0 5.37231 0 12C0 14.5187 0.775873 16.8561 2.10167 18.7862L0.856831 23.1432L5.01335 21.7577C6.98112 23.1691 9.39348 24 12 24C18.6277 24 24 18.6277 24 12ZM14.9174 5.53939C14.1941 5.18631 13.5346 4.98971 12.7186 4.8877C12.5571 4.86878 12.2608 4.84522 12.0591 4.83829C11.6723 4.82629 11.5943 4.84107 11.4831 4.94261C11.3003 5.10599 11.3095 5.45631 11.4997 5.60584C11.6017 5.68384 11.6797 5.70047 12.1306 5.72678C13.4635 5.80478 14.4812 6.16477 15.4652 6.9037C16.6468 7.78708 17.3866 9.01846 17.6668 10.56C17.7379 10.9532 17.7734 11.2828 17.7969 11.7919C17.8112 12.1232 17.8232 12.1966 17.8657 12.282C18.0009 12.54 18.3974 12.5778 18.5774 12.3485C18.672 12.2298 18.684 12.1375 18.6674 11.7231C18.6226 10.5083 18.3591 9.4043 17.8966 8.47615C17.5648 7.81061 17.2514 7.38185 16.6869 6.816C16.0846 6.21693 15.6291 5.88739 14.9174 5.53939ZM7.58124 5.286C7.5074 5.23846 7.37955 5.17247 7.29647 5.14385C7.1257 5.08247 6.85753 5.05614 6.70338 5.08937C6.47815 5.13645 6.19569 5.30492 5.58415 5.75954C5.21631 6.03416 4.71093 6.52708 4.59231 6.726C4.3177 7.19723 4.33384 7.59737 4.66846 8.5186C5.24215 10.0984 6.08215 11.6211 7.18523 13.0897C9.29584 15.9009 11.9548 17.9474 15.2852 19.3182C15.7098 19.4935 15.8469 19.5221 16.1792 19.5051C16.5826 19.4866 16.8886 19.3611 17.3201 19.0343C17.7974 18.672 18.4805 17.8237 18.6559 17.3714C18.8215 16.9431 18.7791 16.5545 18.5322 16.2512C18.3928 16.0832 17.358 15.24 16.8743 14.9012C16.5065 14.6455 15.9374 14.2929 15.6766 14.1577C15.3328 13.9823 14.9912 13.9518 14.6566 14.0654C14.3931 14.1554 14.3054 14.2334 13.9214 14.7166C13.722 14.9631 13.5392 15.1855 13.5157 15.2068C13.4898 15.228 13.4068 15.2755 13.3283 15.3111C13.0177 15.456 12.5931 15.3683 11.898 15.0221C11.3571 14.7544 10.878 14.4157 10.3348 13.9186C9.87232 13.4972 9.40524 12.9475 9.14401 12.5188C8.80708 11.9672 8.55137 11.2496 8.5486 10.854C8.5486 10.6832 8.61784 10.4418 8.70323 10.3186C8.736 10.2688 8.9474 10.0818 9.17263 9.89953C9.73478 9.44722 9.8603 9.30507 9.93646 9.03507C10.0098 8.78399 9.93185 8.44522 9.69693 7.9883C9.28662 7.18753 8.0317 5.58416 7.58124 5.286ZM16.1677 8.56846C15.4371 7.48385 14.3225 6.81599 12.8825 6.60506C12.3157 6.51968 12.1255 6.5506 12.0023 6.74214C11.9469 6.82226 11.9202 6.91881 11.9266 7.01604C11.9331 7.11327 11.9723 7.20545 12.0378 7.27754C12.1255 7.37954 12.2539 7.42707 12.4865 7.446C13.1289 7.49815 13.8337 7.70861 14.3105 7.99292C14.8674 8.32413 15.3247 8.79945 15.6342 9.36877C15.9088 9.87139 16.068 10.5175 16.068 11.1314C16.068 11.5288 16.1225 11.676 16.3052 11.7683C16.4142 11.8251 16.6112 11.8297 16.7035 11.7822C16.7889 11.7374 16.8886 11.6285 16.9195 11.5482C16.9528 11.4628 16.9528 10.9486 16.9218 10.6666C16.8342 9.89724 16.578 9.17954 16.1677 8.56846ZM14.5191 8.95707C14.2131 8.66999 13.8549 8.49277 13.3874 8.39308C13.2543 8.36788 13.1197 8.35125 12.9845 8.34324C12.7851 8.3317 12.7472 8.3363 12.6572 8.38153C12.4172 8.5043 12.3512 8.83847 12.5243 9.04431C12.6189 9.156 12.7066 9.18878 12.9988 9.22432C13.62 9.30047 13.9878 9.53215 14.1964 9.97984C14.2938 10.1908 14.3506 10.4183 14.3815 10.7428C14.4074 10.9865 14.4429 11.0765 14.5569 11.1619C14.7134 11.2828 14.9718 11.2777 15.1121 11.1499C15.2612 11.0128 15.2875 10.8466 15.2234 10.4252C15.1283 9.77862 14.9128 9.32861 14.5191 8.95707Z" fill="#181D23"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item-block">
+                    <div class="footer__item-block-content">
+                        <h3 class="footer__title">Відділи продажу:</h3>
+                        <address>Київ, вул. Дорогожицька, 3, корпус В10, оф. 523</address>
+                        <address>Львів, вул. Замарстинівська, 43</address>
+                        <address>Івано-Франківськ, вул. вул. Незалежності, 35, оф.12</address>
+                        <a href="#" class="footer__button n_btn">Замовити консультацію</a>
+                    </div>
+                </div>           
+            </div>
+            <div class="footer__item">
+                <div id="map"></div>
+            </div>
+        </div>
+        <p class="footer__copyright">2023 PHOENIX MEDICAL RESORT Східниця</p>
+    </div>
+</footer>
+
+      <div id="order-a-call" class="popup"> <!-- popup-video -->
+         <div class="popup__body">
+            <div class="popup__content"> <!-- popup__content-image -->
+               <!--<a href="" class="popup__close close-popup">X</a>-->
+
+               <div class="popup__wrap-form show"> <!-- show -->
+                  <h2>Замовити зворотній зв'язок</h2>
+                  <form class="popup__form" onsubmit="return false">
+                     <input type="text" name="first-name" placeholder="Ім’я*">
+                     <input type="text" name="phone" placeholder="Номер телефону*">
+                     <textarea name="addit-info" placeholder="Додаткова інформація"></textarea>
+                     <button type="submit" class="n_btn demo-send" id="order-a-call-send">Надіслати</button>
+                  </form>
+               </div>
+         
+               <div class="popup__sent-successfully"> <!-- show -->
+                  <h3>Успішно відправлено!</h3>
+                  <p>Ми зв'яжемося з вами найближчим часом для надання необхідної Вам інформації</p>
+                  <a href="" class="n_btn close-popup" id="order-a-call-ok">ок</a>
+               </div>
+      
+            </div>
+         </div>
+      </div>
+
+      <div id="get-a-presentation" class="popup"> <!-- popup-video -->
+         <div class="popup__body">
+            <div class="popup__content"> <!-- popup__content-image -->
+               <!--<a href="" class="popup__close close-popup">X</a>-->
+
+               <div class="popup__wrap-form show"> <!-- show -->
+                  <h2>Отримати презентацію</h2>
+                  <form class="popup__form" onsubmit="return false">
+                     <input type="text" name="first-name" placeholder="Ім’я*">
+                     <input type="text" name="phone" placeholder="Номер телефону*">
+                     <div class="popup__checkboxs">
+                        <p>Зручний для Вас месенджер для відправки презентації</p>
+                        <div class="wrap">
+                           <label class="custom-checkbox">
+                              <input type="checkbox" class="custom-checkbox__input">
+                              <span class="custom-checkbox__box"></span>
+                              Telegram
+                           </label>
+                           <label class="custom-checkbox">
+                              <input type="checkbox" class="custom-checkbox__input">
+                              <span class="custom-checkbox__box"></span>
+                              Viber
+                           </label>
+                           <label class="custom-checkbox">
+                              <input type="checkbox" class="custom-checkbox__input" checked>
+                              <span class="custom-checkbox__box"></span>
+                              WhatsApp
+                           </label>
+                        </div>
+                     </div>
+                     <button type="submit" class="n_btn" id="get-a-presentation-send">Отримати презентацю</button>
+                  </form>
+               </div>
+         
+               <div class="popup__sent-successfully"> <!-- show -->
+                  <h3>Успішно відправлено!</h3>
+                  <p>Ми зв'яжемося з вами найближчим часом для надання необхідної Вам інформації</p>
+                  <a href="" class="n_btn close-popup" id="get-a-presentation-ok">ок</a>
+               </div>
+      
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+   <script src="files/js/demo-for-popup.js?_v=20231120231739"></script>
+
+   <script src="files/swiper/js/swiper-bundle.min.js?_v=20231120231739"></script>
+   <script src="files/swiper/js/home-swiper-settings.js?_v=20231120231739"></script>
+   <script src="js/script.min.js?_v=20231120231739"></script>
+
+   <script src="files/js/jquery-3.7.1.min.js?_v=20231120231739"></script>
+   <script src="files/js/content-by-date.js?_v=20231120231739"></script>
+
+
+   <script src="files/fancybox/fancybox.umd.js?_v=20231120231739"></script>
+   <script src="files/fancybox/fancybox-init.js?_v=20231120231739"></script>
+
+   <script src="files/js/init-map.js?_v=20231120231739"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkUntpxgYywg_nlhREijLYWEUOHYan4dk&callback=initMap&_v=20231120231739"></script>
+
+</body>
+</html>
