@@ -1,0 +1,113 @@
+.block {
+   counter-reset: block-number;
+   width: 100%;
+}
+.block:last-child {
+   border-top: 1px solid #272B30;
+}
+.block__item {
+   border-bottom: 1px solid #272B30;
+   position: relative;
+}
+.block__item.open {
+   border-color: transparent !important;
+}
+.block__title {
+   background-color: transparent;
+   border: none;
+   color: rgba(237, 232, 229, 1);
+   display: table;
+   cursor: pointer;
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 29px;
+   letter-spacing: -0.269565224647522px;
+   margin: 0;
+   padding: 31px 55px 30px 0;
+   position: relative;
+   text-align: left;
+   width: 100%;
+}
+.block__title .block__element {
+   background-color: #AC835E;
+   border-radius: 50%;
+   font-size: 0;
+   height: 39px;
+   position: absolute;
+   right: 0;
+   top: 25px;
+   flex: 0 0 39px;
+   width: 39px;
+   z-index: 1;
+}
+.block__title .block__element::before,
+.block__title .block__element::after {
+   background-color: #181D23;
+   content: '';
+   display: block;
+   left: 50%;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 50%;
+}
+.block__title .block__element::before {
+   height: 2px;
+   width: 12px;
+}
+.block__title .block__element::after {
+   height: 12px;
+   transition: height 0.3s ease 0s;
+   width: 2px;
+}
+.block__title._active .block__element::after {
+   height: 0;
+}
+.block__text {
+   margin-bottom: -7px;
+   padding-right: 55px;
+}
+.block__text p {
+   color: rgba(237, 232, 229, 1);
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 25px;
+   letter-spacing: 0;
+   margin: 0;
+   text-align: left;
+}
+.block__text p:not(:last-child) {
+   margin-bottom: 20px;
+}
+
+@media (max-width: 575.98px) {
+
+   .block__title .block__element {
+      height: 24px;
+      top: 25px;
+      flex: 0 0 24px;
+      width: 24px;
+   }
+   .block__title .block__element::before {
+      width: 7px;
+   }
+   .block__title .block__element::after {
+      height: 7px;
+   }
+   
+   .block__title {
+      font-size: 18px;
+      letter-spacing: 0;
+      padding: 23px 35px 23px 0;
+   }
+   .block__text {
+      margin-bottom: -10px;
+      padding-right: 35px;
+   }
+   .block__text p {
+      color: #95979A;
+      font-size: 16px;
+      line-height: 25px;
+      letter-spacing: 0;
+      text-align: left;
+   }
+}

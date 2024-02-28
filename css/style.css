@@ -824,8 +824,8 @@ a {
 
 .n_sec-title {
   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 55px;
+  font-weight: 600;
   line-height: 116.667%;
   letter-spacing: -0.4px;
   margin: 0;
@@ -1477,6 +1477,15 @@ h6 {
   position: absolute;
   top: 50%;
   width: 50px;
+  z-index: 0;
+}
+
+.wrap-lazy-load-image.img-loaded .sk-spinner-pulse {
+  z-index: -100;
+}
+
+.wrap-lazy-load-image.img-loaded img {
+  z-index: 1;
 }
 
 @keyframes sk-spinner-pulse {
@@ -1489,122 +1498,6 @@ h6 {
     transform: scale(1);
   }
 }
-
-/*
-.wrap-image {
-	height: 100%;
-	position: relative;
-	width: 100%;
-
-	picture.loaded,
-	&.loaded {
-
-		source,
-		img {
-			opacity: 1;
-		}
-		.sk-spinner {
-			opacity: 0;
-		}
-	}
-
-	picture img,
-	picture source,
-	img {
-		opacity: 0;
-		transition: opacity 0.3s ease 0.3s;
-		//z-index: 1;
-	}
-	.sk-spinner {
-		z-index: 0;
-	}
-}
-.loaded .wrap-image {
-
-	img {
-		opacity: 1;
-	}
-	.sk-spinner {
-		opacity: 0;
-	}
-}
-.swiper-slide img {
-	transition: opacity 0.3s ease 0s;
-}
-.swiper-slide.swiper-slide-visible .sk-spinner-pulse.sk-spinner {
-	opacity: 0;
-}
-/*
-.swiper-slide.swiper-slide-visible .sk-spinner-pulse.sk-spinner,
-.swiper-slide img {
-	opacity: 0;
-	transition: opacity 0.3s ease 0s;
-}
-.swiper-slide:nth-child(3) img,
-.swiper-slide.swiper-slide-prev img,
-.swiper-slide.swiper-slide-visible img {
-	opacity: 1;
-}
-*/
-
-/*
-.wrap-map {
-	background-color: #f5f5f5;
-	height: 500px;
-	margin-bottom: 35px;
-	position: relative;
-	width: 100%;
-
-	iframe {
-		border: 0;
-		height: 100%;
-		position: relative;
-		width: 100%;
-	}
-}
-
-._loading-icon {
-	height: 50px;
-}
-._loading-icon {
-	position: relative;
-}
-*/
-
-/*
-.sk-spinner-pulse {
-	animation: sk-spinner-pulse 1s infinite ease-in-out;
-	background-color: #045FBC;
-	border-radius: 100%;
-	height: 50px;
-	width: 50px;
-}
-@-webkit-keyframes sk-spinner-pulse {
-	0% {
-		transform: scale(0);
-	}
-	100% {
-		opacity: 0;
-		transform: scale(1);
-	}
-}
-@keyframes sk-spinner-pulse {
-	0% {
-		transform: scale(0);
-	}
-	100% {
-		opacity: 0;
-		transform: scale(1);
-	}
-}
-.sk-spinner {
-	margin-left: -25px;
-	margin-top: -25px;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-}
-*/
 
 /* n Spollers */
 
@@ -2285,9 +2178,9 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .fs__title {
-  font-size: 55px;
-  font-weight: 400;
-  line-height: 65px;
+  font-size: 57px;
+  font-weight: 600;
+  line-height: 67px;
   margin: 0;
   text-align: center;
 }
@@ -2367,7 +2260,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
 .benefits-investing-pmr .n_sec-title span {
   display: block;
-  max-width: 538px;
+  max-width: 720px;
 }
 
 .benefits-investing-pmr__items {
@@ -2713,7 +2606,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .profitability-forecast {
-  margin-bottom: 173px;
+  margin-bottom: 119px;
 }
 
 .profitability-forecast__items {
@@ -2820,12 +2713,21 @@ body._touch .header .menu__list > li._active .menu__arrow {
   letter-spacing: -0.27px;
 }
 
-.why-its-good-to-invest__content p {
+.why-its-good-to-invest__content p,
+.why-its-good-to-invest__content li {
   color: #ADABAB;
 }
 
-.why-its-good-to-invest__content p:not(:last-child) {
+.why-its-good-to-invest__content p:not(:last-child),
+.why-its-good-to-invest__content li:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.why-its-good-to-invest__content ol,
+.why-its-good-to-invest__content ul {
+  list-style-position: inside;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .why-its-good-to-invest__block-image {
@@ -2950,7 +2852,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .results-in-numbers {
-  margin-bottom: 149px;
+  margin-bottom: 127px;
 }
 
 .results-in-numbers__items {
@@ -3003,6 +2905,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
   font-weight: 600;
 }
 
+.faq {
+  margin-bottom: 195px;
+}
+
 .weekday-routine {
   overflow: hidden;
   margin-bottom: 190px;
@@ -3042,12 +2948,21 @@ body._touch .header .menu__list > li._active .menu__arrow {
   padding-top: 85px;
 }
 
-.weekday-routine__block-text p {
+.weekday-routine__block-text p,
+.weekday-routine__block-text li {
   color: rgba(237, 232, 229, 0.54);
 }
 
-.weekday-routine__block-text p:not(:last-child) {
+.weekday-routine__block-text p:not(:last-child),
+.weekday-routine__block-text li:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.weekday-routine__block-text ol,
+.weekday-routine__block-text ul {
+  list-style-position: inside;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .weekday-routine__gallery-big {
@@ -3070,6 +2985,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
 .weekday-routine__block-image {
   border-radius: 11.985px;
+  cursor: pointer;
   padding-bottom: calc(78% + 1px);
   position: relative;
   overflow: hidden;
@@ -3121,6 +3037,54 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
 .slider-btn-next {
   right: 0;
+}
+
+.pf__block-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: -0.2695652246px;
+  margin: -7px 0 0;
+  text-align: left;
+}
+
+.pf__block-info-columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px -8px 33px;
+}
+
+.pf__block-info-column {
+  background-color: rgb(237, 232, 229);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 8px 16px;
+  padding: 24px 18px 25px;
+  width: calc(33.3333% - 16px);
+}
+
+.pf__block-info-column h4,
+.pf__block-info-column p {
+  color: rgb(172, 131, 94);
+  text-align: center;
+}
+
+.pf__block-info-column h4 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: -0.2695652246px;
+  margin: 0;
+}
+
+.pf__block-info-column p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+  margin: -3px 0 0;
 }
 
 /* Page - Blog */
@@ -3702,11 +3666,11 @@ body.error404 .header__wrapper::after {
   }
 
   .profitability-forecast__item:nth-child(1) {
-    width: calc(43% - 30px);
+    width: calc(42% - 33px);
   }
 
   .profitability-forecast__item:nth-child(2) {
-    width: calc(57% - 30px);
+    width: calc(58% - 27px);
   }
 }
 
@@ -3808,7 +3772,7 @@ body.error404 .header__wrapper::after {
     overflow: hidden;
   }
 
-  .weekday-routine__block-image {
+  .weekday-routine__block-image img {
     pointer-events: none;
   }
 }
@@ -3988,6 +3952,16 @@ body.error404 .header__wrapper::after {
   }
 }
 
+@media screen and (min-width: 1101px) {
+  .profitability-forecast__item:nth-child(1) {
+    width: calc(49% - 33px);
+  }
+
+  .profitability-forecast__item:nth-child(2) {
+    width: calc(51% - 27px);
+  }
+}
+
 @media screen and (min-width: 1201px) {
   .footer__item:nth-child(1) {
     padding-left: calc(3% + 2px);
@@ -4050,11 +4024,11 @@ body.error404 .header__wrapper::after {
   }
 
   .fs__title {
-    font-size: calc(25px + 30 * ((100vw - 320px) / 966));
+    font-size: calc(25px + 32 * ((100vw - 320px) / 966));
   }
 
   .fs__title {
-    line-height: calc(33px + 32 * ((100vw - 320px) / 966));
+    line-height: calc(33px + 34 * ((100vw - 320px) / 966));
   }
 
   .fs__buttons {
@@ -4143,6 +4117,10 @@ body.error404 .header__wrapper::after {
 }
 
 @media screen and (max-width: 1200.98px) {
+  .n_sec-title {
+    font-size: 44px;
+  }
+
   .header__blockLogo {
     flex: 0 0 108px;
   }
@@ -4481,6 +4459,14 @@ body.error404 .header__wrapper::after {
     padding-right: 28px;
   }
 
+  .n_sec-title {
+    font-size: 32px;
+  }
+
+  .benefits-investing-pmr .n_sec-title span {
+    max-width: 520px;
+  }
+
   .infrastructure__content {
     padding-left: 10px;
   }
@@ -4535,7 +4521,6 @@ body.error404 .header__wrapper::after {
     display: table;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 44px;
   }
 
   .profitability-forecast__table {
@@ -4544,6 +4529,14 @@ body.error404 .header__wrapper::after {
 
   .results-in-numbers__item {
     width: calc(33.3333% - 40px);
+  }
+
+  .pf__block-info {
+    margin-top: 36px;
+  }
+
+  .pf__block-info-column {
+    min-height: 200px;
   }
 }
 
@@ -4615,6 +4608,12 @@ body.error404 .header__wrapper::after {
 }
 
 @media screen and (max-width: 640.98px) {
+  .pf__block-info-column {
+    min-height: 160px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
   .page-content .wp-block-columns {
     overflow-x: auto;
     margin-left: -38px;
@@ -4766,6 +4765,10 @@ body.error404 .header__wrapper::after {
   .benefits-investing-pmr {
     padding-bottom: 36px;
     padding-top: 68px;
+  }
+
+  .benefits-investing-pmr .n_sec-title span {
+    max-width: 350px;
   }
 
   .benefits-investing-pmr__items {
@@ -4952,6 +4955,7 @@ body.error404 .header__wrapper::after {
   }
 
   .profitability-forecast__button {
+    margin-top: 27px;
     width: 100%;
   }
 
@@ -5084,6 +5088,10 @@ body.error404 .header__wrapper::after {
     padding-top: 9px;
   }
 
+  .faq {
+    margin-bottom: 80px;
+  }
+
   .weekday-routine {
     margin-bottom: 79px;
   }
@@ -5111,6 +5119,33 @@ body.error404 .header__wrapper::after {
 
   .permissible-documents__slider {
     margin-top: 15px;
+  }
+
+  .pf__block-info {
+    margin-bottom: -26px;
+  }
+
+  .pf__block-info-columns {
+    margin-bottom: 0;
+    margin-left: -7px;
+    margin-right: -7px;
+  }
+
+  .pf__block-info-column {
+    min-height: auto;
+    margin: 0 7px 14px;
+    padding: 27px 8px 29px;
+    width: calc(50% - 14px);
+  }
+
+  .pf__block-info-column:nth-child(3) {
+    width: 100%;
+  }
+
+  .pf__block-info-column h4 {
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: -0.2354262024px;
   }
 
   .blog__section {
